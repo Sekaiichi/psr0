@@ -1,9 +1,15 @@
 <?php
 
+use Hyan\Http\Install;
+use Seka\Mysql\Client;
+
 require __DIR__ . '/../autoload.php';
 
 $client = new Client();
-$server = new Server();
 
+echo $client->connect();
 
+$http = new Install();
+
+echo $http->init();
 
